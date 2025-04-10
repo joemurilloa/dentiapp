@@ -5,7 +5,8 @@ import { generateExpedientePdf } from '../../utils/pdfGenerator';
 
 export const addCita = createAsyncThunk(
   'citas/addCita',
-  async (cita, { rejectWithValue, getState }) => {
+  // Eliminamos getState del destructuring si no lo usamos
+  async (cita, { rejectWithValue }) => {
     try {
       // Crear evento en Calendar
       const eventId = await createCalendarEvent(cita);

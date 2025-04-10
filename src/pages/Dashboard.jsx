@@ -7,7 +7,7 @@ import { Calendar, Users, DollarSign } from 'lucide-react';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
+  //const { user } = useSelector((state) => state.auth);
   const { items: clientes, status: clientesStatus } = useSelector((state) => state.clientes);
   
   useEffect(() => {
@@ -91,11 +91,6 @@ const StatCard = ({ title, value, color, icon }) => {
   );
 };
 
-const AppointmentItem = ({ time, name, service, status }) => {
-  return (
-    <div className="px-6 py-4 flex items-center justify-between">
-      <div className="flex items-center">
-        <div className="w-16 text-sm font-medium text- AppointmentItem
 const AppointmentItem = ({ time, name, service, status }) => {
   return (
     <div className="px-6 py-4 flex items-center justify-between">
