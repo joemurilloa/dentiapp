@@ -4,11 +4,12 @@ import { createGoogleDriveFolders } from './googleApi';
 const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 const SCOPES = [
-  'https://www.googleapis.com/auth/drive.file',
+  'https://www.googleapis.com/auth/drive',  // Cambia drive.file por drive
   'https://www.googleapis.com/auth/spreadsheets',
-  'https://www.googleapis.com/auth/calendar'
+  'https://www.googleapis.com/auth/calendar',
+  'https://www.googleapis.com/auth/userinfo.profile',
+  'https://www.googleapis.com/auth/userinfo.email'
 ];
-
 export const initializeGoogleAuth = () => {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
